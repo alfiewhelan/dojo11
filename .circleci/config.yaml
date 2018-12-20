@@ -19,6 +19,6 @@ jobs:
             mv /tmp/docker/* /usr/bin
     - run:
           TAG=$CIRCLE_BUILD_NUM
-          docker build -t alfredwhelan/microservice01:$TAG .      # (4)
+          docker build -t alfredwhelan/microservice02:$TAG .      # (4)
           docker login -u $DOCKER_USER -p $DOCKER_PASS         # (5)
-          docker push alfredwhelan/microservice01:$TAG
+          docker push alfredwhelan/microservice02:$TAG
